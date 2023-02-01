@@ -1,5 +1,4 @@
 import * as core from '@actions/core';
-import { genToken } from './token';
 import { upload } from './upload';
 
 async function run(): Promise<void> {

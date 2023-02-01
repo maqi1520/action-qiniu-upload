@@ -3,6 +3,7 @@ import path from 'path';
 import glob from 'glob';
 import pAll from 'p-all';
 import pRetry from 'p-retry';
+import { genToken } from './token';
 
 function normalizePath(input: string): string {
   return input.replace(/^\//, '');
