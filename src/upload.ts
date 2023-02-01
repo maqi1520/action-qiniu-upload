@@ -20,9 +20,6 @@ export function upload(
   onComplete: () => void,
   onFail: (errorInfo: any) => void,
 ): void {
-
- 
-
   const baseDir = path.resolve(process.cwd(), srcDir);
   const files = glob.sync(`${baseDir}/**/*`, { nodir: true });
 

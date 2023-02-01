@@ -10,8 +10,6 @@ async function run(): Promise<void> {
     const destDir = core.getInput('dest_dir');
     const ignoreSourceMap = core.getInput('ignore_source_map') === 'true';
 
-   
-
     upload(
       ak,
       sk,
@@ -23,7 +21,7 @@ async function run(): Promise<void> {
       () => core.info('Done!'),
       (error) => core.setFailed(error.message),
     );
-  } catch (error) {
+  } catch (error: any) {
     core.setFailed(error.message);
   }
 }
